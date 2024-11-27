@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="semiFinalACT3.MainPage">
+
+    <ScrollView>
+        <StackLayout>
+            <StackLayout>
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+
+                    <Label Margin="0,0,0,10" Text="Electric Bill" FontAttributes="Bold" FontSize="Large" TextColor="White" HorizontalTextAlignment="Center" ></Label>
+
+                    <Label Margin="0,0,0,10" Text=" - Input Data - " FontAttributes="Italic" FontSize="Medium" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                    <Entry x:Name="meterNo" Placeholder="Meter number:"/>
+                    <Entry x:Name="presentR" Placeholder="Present Reading:"/>
+                    <Entry x:Name="previousR" Placeholder="Previous Reading:"/>
+
+                    <Label Margin="0,0,0,10" Text="Type of Registration" FontAttributes="Italic" FontSize="Medium" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="H" VerticalOptions="Center" />
+                        <CheckBox x:Name="h" VerticalOptions="Center" />
+                        <Label Text="              B" VerticalOptions="Center" />
+                        <CheckBox x:Name="b" VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Button x:Name="btnAdd" WidthRequest="400" Text="Add" Clicked="BtnAdd_Clicked" />
+                    </StackLayout>
+
+                    <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Button x:Name="btnUpdate" WidthRequest="200" Text="Update" Clicked="BtnUpdate_Clicked"/>
+                        <Button x:Name="btnDelete" WidthRequest="200" Text="Delete" Clicked="BtnDelete_Clicked" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+
+</ContentPage>

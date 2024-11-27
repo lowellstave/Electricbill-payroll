@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="semiFinalACT3.print">
+    <ScrollView>
+        <StackLayout>
+            <Button Text="Go Back" Clicked="Back" VerticalOptions="Center"></Button>
+            <ListView x:Name="printData">
+                <ListView.Header>
+                    <Grid Padding="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="Meter No" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold"/>
+                        <Label Grid.Column="1" Text="Principal Amount" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold"/>
+                        <Label Grid.Column="2" Text="Amount Payable" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold"/>
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid Padding="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="4*"/>
+                                        <ColumnDefinition Width="4*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding meterNo}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Italic"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding principalAmount}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Red" FontAttributes="Italic"/>
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding amountPayable}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Red" FontAttributes="Italic"/>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
